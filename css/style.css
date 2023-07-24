@@ -1,0 +1,580 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+
+    padding: 0 50px;
+    background: #ddd;
+}
+
+.header h1 {
+    height: 50px;
+    transition: 0.5s;
+}
+
+.header.on h1 {
+    height: 100px;
+}
+
+.header.on {}
+
+.gnb {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    z-index: 999;
+}
+
+.gnb li a {
+    position: relative;
+    display: block;
+    width: 100px;
+    height: 21px;
+}
+
+.gnb li a span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.gnb li.on a span {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    transform: translate(-100%, 0);
+    color: #ddd;
+}
+
+.gnb li a::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 50%;
+    height: 1px;
+    background: #ddd;
+    transition: width 0.3s;
+}
+
+.gnb li.on a::after {
+    width: 100%;
+}
+
+
+/* ---------- main_slide ---------- */
+.main_visual {
+    position: relative;
+    height: 100vh;
+    /* height: calc(100vh - 101px); */
+    overflow: hidden;
+    color: #fff;
+}
+
+.main_visual .itm {
+    position: relative;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.main_visual .itm .content {
+    position: absolute;
+    padding: 70px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50px 0 50px 0;
+}
+
+.main_visual .itm01 {
+    background: url(../images/slide01.jpg) no-repeat center center/cover;
+}
+
+.main_visual .itm02 {
+    background-image: url(../images/slide02.jpg);
+}
+
+.main_visual .itm03 {
+    background-image: url(../images/slide03.jpg);
+}
+
+.main_visual .itm04 {
+    background-image: url(../images/slide04.jpg);
+}
+
+.main_visual .itm h3 {
+    text-indent: -4px;
+    font-size: 70px;
+    font-weight: 300;
+    /* white-space: nowrap; */
+    color: #fff;
+    margin: 0 0 50px 0;
+    transform: translate(0, 30%);
+    opacity: 0;
+}
+
+.main_visual .itm.on h3 {
+    transform: translate(0, 0);
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.main_visual .itm span {
+    text-indent: -4px;
+    font-size: 64px;
+    font-weight: 700;
+    /* white-space: nowrap; */
+    color: #fff;
+    margin: 0 0 50px 0;
+    transform: translate(0, 30%);
+    opacity: 0;
+}
+
+.main_visual .itm.on span {
+    transform: translate(0, 0);
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.main_visual .itm p {
+    font-size: 22px;
+    font-weight: 300;
+    color: #fff;
+    line-height: 1.2;
+    margin: 0 0 10px 0;
+    text-align: left;
+    transform: translate(0, 100px);
+    opacity: 0;
+}
+
+.main_visual .itm.on p {
+    transform: translate(0, 0);
+    opacity: 1;
+    transition: 0.5s 0.5s;
+}
+
+
+
+.main_visual .menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    gap: 50px;
+}
+
+.main_visual .menu li {
+    position: relative;
+    width: 10px;
+
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.main_visual .menu li::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.main_visual .menu li::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 10px;
+    background: #fff;
+}
+
+.main_visual .menu li.on::after {
+    width: 100%;
+}
+
+.main_visual .menu li a {
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.main_visual .menu li.on a {
+    color: #0b1e3f;
+}
+
+
+
+/* 스크롤 아래로 내리는 버튼 만들기 */
+.main_visual .scr {
+    position: absolute;
+    right: 6.5%;
+    bottom: 100px;
+    padding: 0 15px;
+    transform: translate(-50%, -50%);
+    font-weight: 300;
+    color: #fff
+}
+
+.main_visual .slide_num {
+    position: absolute;
+    left: 23%;
+    top: 820px;
+
+    font-size: 20px;
+    font-weight: 500;
+    transform: translate(-100%, 0);
+    margin: 0 0 0 -16px;
+    padding: 0 15px;
+
+    color: #fff;
+}
+
+.main_visual .scr::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 15px;
+    width: 24px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0);
+    border: 2px solid #fff;
+    border-radius: 20px;
+}
+
+.main_visual .scr::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 26px;
+    width: 2px;
+    height: 10px;
+    background: #ddd;
+    border-radius: 1px;
+    animation: wheel 1s infinite;
+}
+
+@keyframes wheel {
+    0% {
+        transform: translate(0, 0);
+    }
+
+
+
+    100% {
+        transform: translate(0, 15px);
+    }
+
+
+}
+
+.main_visual .scr span {
+    position: absolute;
+    top: 13px;
+    left: 0;
+    white-space: nowrap;
+    font-size: 14px;
+    text-transform: uppercase;
+    transform: translate(calc(-100% - 20px), 0);
+}
+
+/*section02 - portpolio*/
+.main_business {
+    position: relative;
+    background: url(../images/business_bg.jpg);
+    height: 100vh;
+}
+
+.main_business .title {
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+
+.main_business .title h2 {
+    font-size: 56px;
+    color: #fff;
+}
+
+/*------------*/
+.main_business .content {
+    max-width: 100%;
+    padding: 0 0;
+}
+
+.main_business .content .business_slide {}
+
+
+.main_business .content figure {
+    padding: 0 15px;
+    margin: 0 -100px 15px -100px;
+    transition: 0.3s;
+    /* max-width: 1600px; */
+    width: 800px;
+}
+
+.main_business .box.slick-current {
+    transform: scale(0.8);
+    transition: 0.5s 0.2s;
+}
+
+.main_business .box:not(.slick-current) {
+    transform: scale(0.5);
+    transition: 0.5s 0.2s;
+    filter: grayscale(1);
+}
+
+.main_business .content .business_slide .box .txt_box {
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+}
+
+.main_business .content .business_slide .box .txt_box .txt h3 {
+    margin: 0 0 16px 0;
+    font-size: 35px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.main_business .content .business_slide .box .txt_box .txt p {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #999;
+}
+
+.main_business .content .business_slide .box .txt_box .link {
+    padding: 10px 0 0 0;
+}
+
+.main_business .content .business_slide .box .txt_box .link a {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #fff;
+}
+
+.main_business .itm {
+    display: none;
+    flex-direction: column;
+    height: 100%;
+}
+
+.main_business .itm h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 0 8px 0;
+}
+
+
+.main_business .tab_arrows {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 700px;
+    width: 100%;
+    user-select: none;
+    cursor: pointer;
+}
+
+.main_business .tab_arrows .left {
+    position: absolute;
+    left: 15px;
+    width: 50px;
+    height: 30px;
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.main_business .tab_arrows .left::before {
+    content: "";
+    position: absolute;
+    top: 60%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #fff;
+}
+
+.main_business .tab_arrows .left::after {
+    content: "";
+    position: absolute;
+    top: 60%;
+    left: 0;
+    width: 20px;
+    height: 2px;
+    background: #fff;
+
+    transform: rotate(-45deg);
+    transform-origin: left bottom;
+}
+
+.main_business .tab_arrows .right {
+    position: absolute;
+    right: 15px;
+    width: 50px;
+    height: 30px;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.main_business .tab_arrows .right::before {
+    content: "";
+    position: absolute;
+    top: 60%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #fff;
+}
+
+.main_business .tab_arrows .right::after {
+    content: "";
+    position: absolute;
+    top: 60%;
+    right: 0;
+    width: 20px;
+    height: 2px;
+    background: #fff;
+
+    transform: rotate(45deg);
+    transform-origin: right bottom;
+}
+
+
+.main_business .itm a {
+    margin: auto 0 0 0;
+    align-self: flex-start;
+}
+
+.main_business .itm.on {
+    display: flex;
+}
+
+
+/* section03 */
+
+
+.main_showroom {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 15px;
+    height: 100vh;
+}
+
+.main_showroom .show_bg {
+    position: relative;
+}
+
+.main_showroom .show_bg .txt_box {
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    left: 0;
+    transform: translate(30%, 80%);
+    align-items: end;
+}
+
+.main_showroom .show_bg .txt_box .txt_lf {
+    position: relative;
+    margin: 0 auto 0 0;
+}
+
+.main_showroom .show_bg .txt_box .txt_lf h2 {
+    font-size: 56px;
+    font-weight: 300;
+    margin: 0 0 20px 0;
+}
+
+.main_showroom .show_bg .txt_box .txt_lf span {
+    font-size: 56px;
+    font-weight: 700;
+}
+
+.main_showroom .show_bg .txt_box .txt_lf p {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.main_showroom .show_bg .txt_box .link a {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 60px;
+    line-height: 60px;
+    color: #fff;
+    text-align: center;
+    background-color: #000;
+    border: 1px solid #000;
+}
+
+.main_showroom .show_bg .txt_box .link a:hover {
+    color: #444;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #000;
+}
+
+/*section 03 - main_news*/
+.main_big_product {
+    position: relative;
+    background: #f9f9f9;
+}
+
+.main_big_product .case {
+    overflow: hidden;
+}
+
+.main_big_product .product_slide2 {
+    margin: 0 -15px
+}
+
+.main_big_product .product_slide2 figure {
+    padding: 0 15px;
+}
+
+
+.main_big_product .arrows {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: flex;
+    justify-content: space-between;
+
+    transform: translate(-50%, -50%);
+    max-width: 1400px;
+    width: 100%;
+
+    padding: 0 15px;
+}
+
+.main_big_product .arrows i {
+    padding: 20px 5px;
+    background: #ddd;
+}
+
+
+/*footer*/
+.footer {
+    height: 500px;
+    padding: 100px;
+    background: #333;
+}
+
+.footer .inner {
+    height: 500px;
+}
