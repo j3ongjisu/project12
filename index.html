@@ -22,17 +22,76 @@
 
 <body>
     <div class="wrap">
-        <header class="header">
-            <h1><a href="#main">메뉴</a></h1>
+        <header class="header on">
+            <div class="inner">
+                <h1>
+                    <a href="#!">
+                        <img src="./images/logo.png" alt="">
+                    </a>
+                </h1>
+                <nav class="gnb">
+                    <ul>
+                        <li><a href="/" class="tit">Campany</a>
+                            <ul class="sub">
+                                <li><a href="">회사소개</a></li>
+                                <li><a href="">사업영역</a></li>
+                                <li><a href="">연혁 및 수상 내역</a></li>
+                                <li><a href="">대표 인사말</a></li>
+                                <li><a href="">준법경영</a></li>
+                                <li><a href="">재무정보</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/" class="tit">Business</a>
+                            <ul class="sub">
+                                <li><a href="">주방가구</a></li>
+                                <li><a href="">특판가구</a></li>
+                                <li><a href="">옵션</a></li>
+                                <li><a href="">리빙가구</a></li>
+                                <li><a href="">스마트오피스</a></li>
+                                <li><a href="">호텔&리조트</a></li>
+                                <li><a href="">수제맥주</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/" class="tit">Portpolio</a>
+                            <ul class="sub">
+                                <li><a href="">주요납품실적</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/" class="tit">Showroom</a>
+                            <ul class="sub">
+                                <li><a href="">삼성동 쇼룸</a></li>
+                                <li><a href="">파주 쇼룸</a></li>
+                                <li><a href="">워크스테이션</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/" class="tit">Relation</a>
+                            <ul class="sub">
+                                <li><a href="">브랜드 뉴스</a></li>
+                                <li><a href="">문화/스포츠 후원</a></li>
+                                <li><a href="">사회공헌활동</a></li>
+                                <li><a href="">문의하기</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/" class="tit">Bidding System</a>
+                            <ul class="sub">
+                                <li><a href="">입찰공고</a></li>
+                                <li><a href="">내 입찰현황</a></li>
+                                <li><a href="">회원정보수정</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </header>
-        <nav class="gnb">
+
+        <div class="scroll">
             <ul>
                 <li class="on"><a href="#main"><span>Nefs</span></a></li>
                 <li><a href="#sub01"><span>Business</span></a></li>
                 <li><a href="#sub02"><span>Showroom</span></a></li>
                 <li><a href="#sub03"><span>News</span></a></li>
             </ul>
-        </nav>
+        </div>
         <main>
             <div class="Main__content">
                 <!-- section 01-->
@@ -42,7 +101,7 @@
                         <div class="itm itm01">
                             <div class="content inner">
                                 <p>공간의 변화는 넵스로부터</p>
-                                <h3><span>N</span>ew Experience For Space</h3>
+                                <h3>New Experience For Space</h3>
                                 <a href="" class="btn">view more <i class="xi-arrow-right"></i></a>
                             </div>
                         </div>
@@ -50,7 +109,7 @@
                         <div class="itm itm02">
                             <div class="content inner">
                                 <p>공간의 변화는 넵스로부터</p>
-                                <h3><span>N</span>ew Experience For Space</h3>
+                                <h3>New Experience For Space</h3>
                                 <a href="" class="btn">view more <i class="xi-arrow-right"></i></a>
                             </div>
                         </div>
@@ -58,7 +117,7 @@
                         <div class="itm itm03">
                             <div class="content inner">
                                 <p>공간의 변화는 넵스로부터</p>
-                                <h3><span>N</span>ew Experience For Space</h3>
+                                <h3>New Experience For Space</h3>
                                 <a href="" class="btn">view more <i class="xi-arrow-right"></i></a>
                             </div>
                         </div>
@@ -85,7 +144,7 @@
                 <!-- section 02-->
                 <section class="main_business section">
                     <div class="title">
-                        <h2><span>B</span>USINESS</h2>
+                        <h2>BUSINESS</h2>
                     </div>
                     <div class="inner content">
                         <div class="business_slide">
@@ -145,7 +204,7 @@
                                 <div class="txt_box">
                                     <div class="txt">
                                         <h3>호텔&amp;리조트</h3>
-                                        <p>넵스는 라이프 스타일을 선도하는 호텔, 리조트 및 관광지 조성 사업을 통해 </br>새로운 공간을 창조하며 발전해 나가고 있습니다.</p>
+                                        <p>넵스는 라이프 스타일을 선도하는 호텔, 리조트 및 관광지 조성 사업을</br> 통해 새로운 공간을 창조하며 발전해 나가고 있습니다.</p>
                                     </div>
                                     <div class="link">
                                         <a href="">MORE <i class="xi-angle-right-min"></i></a>
@@ -180,10 +239,6 @@
                                     </div>
                                 </div>
                             </div>
-
-
-
-
                         </div>
 
                         <div class="tab_arrows">
@@ -196,66 +251,105 @@
                 </section>
                 <!-- section 03-->
                 <section class="main_showroom section">
-                    <div class="show_bg">
-                        <div class="img_box">
-                            <img src="./images/showroom01.jpg" alt="">
-                        </div>
-
-                        <div class="txt_box">
-                            <div class="txt_lf">
-                                <h2><span>N</span>EFS SHOWROOM & </br>
-                                    WORK STATION</h2>
-                                <p>워크 스타일은 어떻게 변화하는지, 어떤 베네핏이 있는지 ​직접 확인해보세요!</p>
+                    <div class="show_wrap">
+                        <div class="show_bg">
+                            <div class="img_box">
+                                <img src="./images/showroom01.jpg" alt="">
                             </div>
                             <div class="link">
                                 <a href="/">View more</a>
+                            </div>
+                            <div class="txt_box">
+                                <div class="txt_lf">
+                                    <h2>NEFS SHOWROOM & </br>
+                                        WORK STATION</h2>
+                                    <p>워크 스타일은 어떻게 변화하는지, 어떤 베네핏이 있는지 ​직접 확인해보세요!</p>
+                                </div>
+
                             </div>
                         </div>
                     </div>
                 </section>
 
-
-                <section class="main_big_product section">
+                <!-- section - main_news-->
+                <section class="main_news section">
                     <div class="title inner">
-                        <h2><span>R</span>ELATION</h2>
-                        <a href="">MORE</a>
+                        <h2>RELATION</h2>
+                        <a href="">MORE <i class="xi-plus"></i></a>
                     </div>
 
                     <div class="inner">
                         <div class="case">
                             <div class="product_slide2">
                                 <figure>
-                                    <div class="img_box">
-                                        <img src="./images/relation01.jpg" alt="">
+                                    <div class="box">
+                                        <div class="img_box">
+                                            <img src="./images/relation01.jpg" alt="">
+                                        </div>
+                                        <div class="txt_box">
+                                            <strong>넵스, 직장인 대상 ‘스마트오피스 인식조사’ 설문결과 발표</strong>
+                                            <p>- 전국 20~59세 직장인 1,000명 대상 설문조사 결과, 72%가 스마트오피스 도입의 필요성 느껴
+                                                - 스마트오피스로 공간 효율과 생산성 향상 등 다양한 효과 누릴 수 있어 최근 많은 기업이 주목</p>
+                                        </div>
                                     </div>
                                 </figure>
                                 <figure>
-                                    <div class="img_box">
-                                        <img src="./images/relation02.jpg" alt="">
+                                    <div class="box">
+                                        <div class="img_box">
+                                            <img src="./images/relation02.jpg" alt="">
+                                        </div>
+                                        <div class="txt_box">
+                                            <strong>넵스, 'MTN 신영일의 비즈정보플러스' 방영</strong>
+                                            <p>지난 9월 18일, MTN 시사 교양 프로그램인 '신영일의 비즈 플러스'에 넵스의 스마트오피스가 방영되어 새로워진 스마트오피스의
+                                                특징과 장점을 소개했습니다.
+                                                코로나19 이후 국내 기업들이 장기적으로 일하는 방식의 변화를 꾀함에 따라, 사무공간도 보다 효율적인 업무 환경을 갖춘 공간으로
+                                                변화하고 있습니다. </p>
+                                        </div>
                                     </div>
                                 </figure>
                                 <figure>
-                                    <div class="img_box">
-                                        <img src="./images/relation03.jpg" alt="">
+                                    <div class="box">
+                                        <div class="img_box">
+                                            <img src="./images/relation03.jpg" alt="">
+                                        </div>
+                                        <div class="txt_box">
+                                            <strong>MBN, 넵스 147번째 '꿈의 가구 기증' 프로젝트 방영</strong>
+                                            <p>넵스(NEFS)의 지역사회 어린이들의 생활환경 개선을 위한 147번째 ‘꿈의 가구 기증’ 프로젝트 소식이 MBN 뉴스에
+                                                방영되었습니다.
+                                            </p>
+                                        </div>
                                     </div>
                                 </figure>
                                 <figure>
-                                    <div class="img_box">
-                                        <img src="./images/relation04.jpg" alt="">
+                                    <div class="box">
+                                        <div class="img_box">
+                                            <img src="./images/relation04.jpg" alt="">
+                                        </div>
+                                        <div class="txt_box">
+                                            <strong>넵스 '스마트오피스' 新패러다임 열다</strong>
+                                            <p>종합가구 기업 넵스(대표 김호균)가 차세대 먹거리로 스마트오피스 시장에 주목하고 사업을 확대하고 있다.
+                                                최근 신종 코로나바이러스 감염증(코로나19) 재확산으로 가구업계는 스마트 제품 개발과 마케팅 활동을 강화하고 있다.</p>
+                                        </div>
                                     </div>
                                 </figure>
                                 <figure>
-                                    <div class="img_box">
-                                        <img src="./images/relation05.jpg" alt="">
-                                    </div>
+                                    <div class="box">
+                                        <div class="img_box">
+                                            <img src="./images/relation05.jpg" alt="">
+                                        </div>
+                                        <div class="txt_box">
+                                            <strong>포스트 코로나 시대를 대비하는 새로운 오피스의 기준, 넵스 ‘스마트오피스’</strong>
+                                            <p>스마트오피스는 기업 고유의 문화와 환경을 반영한 공간 디자인과 컨설팅을 기반으로 자율좌석시스템, 화상회의 등
+                                                IT 솔루션을 접목해 보다 유연하고 창의적인 업무를 수행할 수 있는 새로운 오피스 형태다.</p>
+                                        </div>
                                 </figure>
 
                             </div>
                         </div>
 
                         <div class="arrows">
-                            <i class="xi-arrow-left left"></i>
-                            <i class="xi-arrow-right right"></i>
+                            <i class="xi-angle-left-thin left"></i>
+                            <i class="xi-angle-right-thin right"></i>
                         </div>
                     </div>
                 </section>

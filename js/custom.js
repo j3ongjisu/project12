@@ -13,18 +13,24 @@ $(function () {
         },
         afterLoad: function (lnk, idx) {
             console.log(lnk, idx);
-            // $('.gnb li').eq(idx - 1).addClass('on').siblings().removeClass('on');
+            // $('.scroll li').eq(idx - 1).addClass('on').siblings().removeClass('on');
             $('.Main__content .section').eq(idx - 1).addClass('on').siblings().removeClass('on');
-        },
-        onLeave: function (idx, nidx, dir) {
-            $('.gnb li').eq(nidx - 1).addClass('on').siblings().removeClass('on');
-            console.log(idx, nidx, dir);
 
-            if (dir == 'up') {
+            if (idx == 1) {
                 $('.header').addClass('on')
             } else {
                 $('.header').removeClass('on')
             }
+        },
+        onLeave: function (idx, nidx, dir) {
+            $('.scroll li').eq(nidx - 1).addClass('on').siblings().removeClass('on');
+            console.log(idx, nidx, dir);
+
+            // if (dir == 'up') {
+            //     $('.header').addClass('on')
+            // } else {
+            //     $('.header').removeClass('on')
+            // }
 
         }
     });
@@ -85,11 +91,11 @@ $(function () {
         $('.business_slide').slick('slickNext')
     });
 
-    // .main_big_product에 화살표 버튼 눌러서 슬라이드 돌아가게 하기
-    $('.main_big_product .arrows .left').on('click', function () {
+    // .main_news에 화살표 버튼 눌러서 슬라이드 돌아가게 하기
+    $('.main_news .arrows .left').on('click', function () {
         $('.product_slide2').slick('slickPrev');
     });
-    $('.main_big_product .arrows .right').on('click', function () {
+    $('.main_news .arrows .right').on('click', function () {
         $('.product_slide2').slick('slickNext');
     });
 

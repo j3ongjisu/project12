@@ -4,44 +4,131 @@
     left: 0;
     right: 0;
     z-index: 999;
-
-    padding: 0 50px;
-    background: #ddd;
-}
-
-.header h1 {
-    height: 50px;
+    color: #ddd;
+    white-space: nowrap;
+    display: none;
     transition: 0.5s;
 }
 
-.header.on h1 {
-    height: 100px;
+.header.on {
+    display: block;
 }
 
-.header.on {}
+.header:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
 
-.gnb {
+.header .inner {
+    display: flex;
+    /* align-items: center; */
+    height: 100px;
+    line-height: 100px;
+}
+
+.header a {
+    display: block;
+}
+
+.header .gnb {
+    margin: 0 0 0 auto;
+}
+
+.header .gnb .tit {
+    position: relative;
+    font-size: 19px;
+    text-align: center;
+}
+
+.header .gnb .tit::before {
+    content: "";
+    position: absolute;
+}
+
+.header .gnb>ul {
+    display: flex;
+    gap: 40px;
+}
+
+.header .gnb>ul>li {
+    position: relative;
+    width: 120px;
+}
+
+.header .sub {
+    height: 0;
+    overflow: hidden;
+
+    position: absolute;
+    top: 110px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 999;
+
+    text-align: center;
+    width: 100%;
+    line-height: 40px;
+
+    transition: 0.5s;
+}
+
+.header .sub li {
+    transition: 0.5s;
+}
+
+.header .sub li:hover {
+    color: #fff;
+}
+
+
+/* header01에서 hover 위치 조정으로 다단 메뉴 전체 나오게 하기 */
+.header .gnb:hover>ul>li .sub {
+    height: 200px;
+}
+
+.header .gnb {
+    /* position: relative; */
+}
+
+.header .gnb::before {
+    content: "";
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 0px;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+
+    transition: 0.5s;
+}
+
+.header .gnb:hover::before {
+    height: 250px;
+}
+
+
+.scroll {
     position: fixed;
-    top: 50%;
+    top: 40%;
     right: 0;
     z-index: 999;
 }
 
-.gnb li a {
+.scroll li a {
     position: relative;
     display: block;
     width: 100px;
-    height: 21px;
+    height: 40px;
 }
 
-.gnb li a span {
+.scroll li a span {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 40px;
     display: none;
 }
 
-.gnb li.on a span {
+.scroll li.on a span {
     display: block;
     font-size: 13px;
     font-weight: 700;
@@ -49,7 +136,7 @@
     color: #ddd;
 }
 
-.gnb li a::after {
+.scroll li a::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -60,7 +147,7 @@
     transition: width 0.3s;
 }
 
-.gnb li.on a::after {
+.scroll li.on a::after {
     width: 100%;
 }
 
@@ -84,7 +171,7 @@
 
 .main_visual .itm .content {
     position: absolute;
-    padding: 70px;
+    padding: 55px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -110,7 +197,7 @@
 }
 
 .main_visual .itm h3 {
-    text-indent: -4px;
+    text-indent: -3px;
     font-size: 70px;
     font-weight: 300;
     /* white-space: nowrap; */
@@ -126,21 +213,9 @@
     transition: 0.5s;
 }
 
-.main_visual .itm span {
-    text-indent: -4px;
-    font-size: 64px;
+.main_visual .itm.on h3::first-letter {
+    font-size: 70px;
     font-weight: 700;
-    /* white-space: nowrap; */
-    color: #fff;
-    margin: 0 0 50px 0;
-    transform: translate(0, 30%);
-    opacity: 0;
-}
-
-.main_visual .itm.on span {
-    transform: translate(0, 0);
-    opacity: 1;
-    transition: 0.5s;
 }
 
 .main_visual .itm p {
@@ -155,6 +230,26 @@
 }
 
 .main_visual .itm.on p {
+    transform: translate(0, 0);
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.main_visual .itm a {
+    font-size: 18px;
+    font-weight: 300;
+    color: #fff;
+    text-align: left;
+    transform: translate(0, 100px);
+    opacity: 0;
+
+}
+
+.main_visual .itm i {
+    vertical-align: middle;
+}
+
+.main_visual .itm.on a {
     transform: translate(0, 0);
     opacity: 1;
     transition: 0.5s 0.5s;
@@ -186,6 +281,7 @@
     left: 0;
     width: 100%;
     height: 10px;
+    border-radius: 50%;
     background: rgba(255, 255, 255, 0.5);
 }
 
@@ -196,6 +292,7 @@
     left: 0;
     width: 0;
     height: 10px;
+    border-radius: 50%;
     background: #fff;
 }
 
@@ -301,7 +398,13 @@
 
 .main_business .title h2 {
     font-size: 56px;
+    font-weight: 300;
     color: #fff;
+}
+
+.main_business .title h2::first-letter {
+    font-size: 56px;
+    font-weight: 700;
 }
 
 /*------------*/
@@ -339,7 +442,7 @@
 }
 
 .main_business .content .business_slide .box .txt_box .txt h3 {
-    margin: 0 0 16px 0;
+    margin: 0 0 20px 0;
     font-size: 35px;
     font-weight: 600;
     color: #fff;
@@ -474,21 +577,28 @@
     height: 100vh;
 }
 
+.main_showroom .show_wrap {}
+
 .main_showroom .show_bg {
     position: relative;
 }
 
+.main_showroom .show_bg .img_box {
+    position: relative;
+    border-radius: 0 50px 0 50px;
+    overflow: hidden;
+}
+
 .main_showroom .show_bg .txt_box {
-    position: absolute;
     display: flex;
-    bottom: 0;
-    left: 0;
-    transform: translate(30%, 80%);
     align-items: end;
+    margin: -30px 0 0 0;
+    position: relative;
+    z-index: 999;
+    transform: translate(150px, 0);
 }
 
 .main_showroom .show_bg .txt_box .txt_lf {
-    position: relative;
     margin: 0 auto 0 0;
 }
 
@@ -498,31 +608,35 @@
     margin: 0 0 20px 0;
 }
 
-.main_showroom .show_bg .txt_box .txt_lf span {
+
+.main_showroom .show_bg .txt_box .txt_lf h2::first-letter {
     font-size: 56px;
     font-weight: 700;
 }
+
 
 .main_showroom .show_bg .txt_box .txt_lf p {
     font-size: 20px;
     font-weight: 300;
 }
 
-.main_showroom .show_bg .txt_box .link a {
+.main_showroom .show_bg .link a {
     display: block;
     position: absolute;
-    top: 0;
+    bottom: -25%;
     right: 0;
-    width: 250px;
+    transform: translate(0, 0);
+    width: 230px;
     height: 60px;
     line-height: 60px;
     color: #fff;
     text-align: center;
     background-color: #000;
     border: 1px solid #000;
+    transition: 0.5s;
 }
 
-.main_showroom .show_bg .txt_box .link a:hover {
+.main_showroom .show_bg .link a:hover {
     color: #444;
     text-align: center;
     background-color: #fff;
@@ -530,42 +644,99 @@
 }
 
 /*section 03 - main_news*/
-.main_big_product {
-    position: relative;
-    background: #f9f9f9;
+
+.main_news {
+    background: #fff;
 }
 
-.main_big_product .case {
+.main_news .title {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main_news .title h2 {
+    font-size: 56px;
+    margin: 0 0 20px 0;
+}
+
+.main_news .title h2::first-letter {
+    font-size: 56px;
+    font-weight: 700;
+}
+
+.main_news .title a {
+    font-size: 16px;
+    align-items: center;
+    text-align: center;
+}
+
+.main_news .title span {
+    font-size: 56px;
+    font-weight: 700;
+}
+
+.main_news .case {
     overflow: hidden;
 }
 
-.main_big_product .product_slide2 {
+.main_news .product_slide2 {
     margin: 0 -15px
 }
 
-.main_big_product .product_slide2 figure {
-    padding: 0 15px;
+.main_news .product_slide2 figure {
+    padding: 0 17px;
+}
+
+.main_news .product_slide2 figure .box {
+    border: 1px solid #ddd;
+    border-radius: 15px;
+}
+
+.main_news .product_slide2 figure .img_box {
+    margin: 0 0 8px 0;
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
+}
+
+.main_news .product_slide2 figure .txt_box {
+    height: 140px;
+    padding: 15px;
+}
+
+.main_news .product_slide2 figure .txt_box strong {
+    display: inline-block;
+    font-size: 21px;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+}
+
+.main_news .product_slide2 figure .txt_box p {
+    font-size: 15px;
+    font-weight: 400;
+    color: #888;
 }
 
 
-.main_big_product .arrows {
+.main_news .arrows {
     position: absolute;
-    left: 50%;
-    top: 50%;
+    left: 27%;
+    top: 25%;
     display: flex;
-    justify-content: space-between;
 
     transform: translate(-50%, -50%);
-    max-width: 1400px;
+    max-width: 100px;
     width: 100%;
 
     padding: 0 15px;
 }
 
-.main_big_product .arrows i {
-    padding: 20px 5px;
-    background: #ddd;
+.main_news .arrows i {
+    padding: 10px;
+    font-size: 30px;
+    color: #111;
 }
+
 
 
 /*footer*/
