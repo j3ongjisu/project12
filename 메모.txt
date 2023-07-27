@@ -1,0 +1,11 @@
+메뉴
+3) 버튼 위치
+4) 만들기
+footer
+
+
+gnb 태그 겹침
+제목 span 태그
+
+npx create-react-app movie
+npm start

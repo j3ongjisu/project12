@@ -23,16 +23,16 @@
 <body>
     <div class="wrap">
         <header class="header on">
-            <div class="inner">
+            <div class="header_wrap inner">
                 <h1>
-                    <a href="#!">
+                    <a href="/">
                         <img src="./images/logo.png" alt="">
                     </a>
                 </h1>
                 <nav class="gnb">
-                    <ul>
+                    <ul class="main_menu">
                         <li><a href="/" class="tit">Campany</a>
-                            <ul class="sub">
+                            <ul class="sub sub_menu">
                                 <li><a href="">회사소개</a></li>
                                 <li><a href="">사업영역</a></li>
                                 <li><a href="">연혁 및 수상 내역</a></li>
@@ -42,7 +42,7 @@
                             </ul>
                         </li>
                         <li><a href="/" class="tit">Business</a>
-                            <ul class="sub">
+                            <ul class="sub sub_menu">
                                 <li><a href="">주방가구</a></li>
                                 <li><a href="">특판가구</a></li>
                                 <li><a href="">옵션</a></li>
@@ -53,19 +53,19 @@
                             </ul>
                         </li>
                         <li><a href="/" class="tit">Portpolio</a>
-                            <ul class="sub">
+                            <ul class="sub sub_menu">
                                 <li><a href="">주요납품실적</a></li>
                             </ul>
                         </li>
                         <li><a href="/" class="tit">Showroom</a>
-                            <ul class="sub">
+                            <ul class="sub sub_menu">
                                 <li><a href="">삼성동 쇼룸</a></li>
                                 <li><a href="">파주 쇼룸</a></li>
                                 <li><a href="">워크스테이션</a></li>
                             </ul>
                         </li>
                         <li><a href="/" class="tit">Relation</a>
-                            <ul class="sub">
+                            <ul class="sub sub_menu">
                                 <li><a href="">브랜드 뉴스</a></li>
                                 <li><a href="">문화/스포츠 후원</a></li>
                                 <li><a href="">사회공헌활동</a></li>
@@ -73,7 +73,7 @@
                             </ul>
                         </li>
                         <li><a href="/" class="tit">Bidding System</a>
-                            <ul class="sub">
+                            <ul class="sub sub_menu">
                                 <li><a href="">입찰공고</a></li>
                                 <li><a href="">내 입찰현황</a></li>
                                 <li><a href="">회원정보수정</a></li>
@@ -81,6 +81,11 @@
                         </li>
                     </ul>
                 </nav>
+            </div>
+            <div class="mobile_btn">
+                <button>
+                    <span class="blind">모바일 버튼</span>
+                </button>
             </div>
         </header>
 
@@ -92,14 +97,14 @@
                 <li><a href="#sub03"><span>News</span></a></li>
             </ul>
         </div>
-        <main>
+        <div class="f_wrap">
             <div class="Main__content">
                 <!-- section 01-->
                 <section class="main_visual section">
                     <div class="main_slide">
 
                         <div class="itm itm01">
-                            <div class="content inner">
+                            <div class="content on inner">
                                 <p>공간의 변화는 넵스로부터</p>
                                 <h3>New Experience For Space</h3>
                                 <a href="" class="btn">view more <i class="xi-arrow-right"></i></a>
@@ -124,6 +129,7 @@
                     </div>
 
 
+
                     <ul class="menu">
                         <li>
                             <a href="#slide1"></a>
@@ -137,7 +143,7 @@
                     </ul>
 
                     <!--스크롤 아래로 내리는 버튼 만들기-->
-                    <a href="#down" class="scr">
+                    <a href="#sub01" class="scr">
                         <span>scroll down</span>
                     </a>
                 </section>
@@ -348,18 +354,54 @@
                         </div>
 
                         <div class="arrows">
-                            <i class="xi-angle-left-thin left"></i>
-                            <i class="xi-angle-right-thin right"></i>
+                            <i class="xi-angle-left left"></i>
+                            <i class="xi-angle-right right"></i>
                         </div>
                     </div>
                 </section>
-        </main>
-        <footer class="footer section fp-auto-height">
-            <div class="inner">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                <footer class="footer section fp-auto-height">
+                    <div class="ft_box inner">
+
+                        <div class="logo_box">
+                            <img src="./images/logo.png" alt="">
+                        </div>
+
+                        <div class="txt_box">
+                            <address>
+                                <ul class="ft_top">
+                                    <li><a href="/">CI</a></li>
+                                    <li><a href="/">CS Center</a></li>
+                                    <li class="strong"><a href="/">개인정보처리방침</a></li>
+                                </ul>
+                                <ul class="txt">
+                                    <li>(주)넵스</li>
+                                    <li>주소 : 서울특별시 강남구 봉은사로 427(삼성동)</li>
+                                    <li>대표번호 : 1566-2300</li>
+                                    <li>이메일 : nefs@nefs.co.kr</li>
+                                </ul>
+                                <p>&copy; NEFS. ALL RIGHT RESERVEED .</p>
+                                <ul class="sns">
+                                    <li><a href="https://www.facebook.com/nefshome/" target="_blank"><i
+                                                class="xi-facebook"></i></a></li>
+                                    <li><a href="https://www.instagram.com/nefs_furniture/?hl=ko" target="_blank"><i
+                                                class="xi-instagram"></i></a></li>
+                                    <li><a href="https://www.youtube.com/c/nefsofficial" target="_blank"><i
+                                                class="xi-youtube-play"></i></a></li>
+                                </ul>
+
+                            </address>
+                        </div>
+                        <div class="to_top_box">
+                            <a href="#main" class="to_top">
+                                <i class="xi-angle-up"><span>TOP</span></i>
+                            </a>
+                        </div>
+                    </div>
             </div>
-        </footer>
-    </div>
+            </footer>
+            </main>
+
+        </div>
     </div>
 </body>
 
