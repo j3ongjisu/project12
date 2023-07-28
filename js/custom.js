@@ -19,7 +19,10 @@ $(function () {
             if (idx == 1) {
                 $('.header').addClass('on')
             } else {
-                $('.header').removeClass('on')
+                if ($(window).width() > 767) {
+                    $('.header').removeClass('on')
+                }
+
             }
         },
         onLeave: function (idx, nidx, dir) {
