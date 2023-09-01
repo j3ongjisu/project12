@@ -917,12 +917,6 @@
 
 
 @media (max-width:768px) {
-    /* * {
-        outline: 1px solid;
-    } */
-
-
-    /* ㅡㅡㅡㅡㅡㅡㅡㅡ */
     .header {
         position: fixed;
         top: 0;
@@ -983,9 +977,7 @@
         height: 0px;
         background: rgba(0, 0, 0, 0);
         z-index: 999;
-
         display: none;
-
         transition: 0.5s;
     }
 
@@ -1064,7 +1056,6 @@
         height: auto;
         display: none;
     }
-
 
     .gnb .main_menu .sub_menu::before {
         display: none;
